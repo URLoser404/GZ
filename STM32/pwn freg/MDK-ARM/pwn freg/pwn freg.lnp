@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"pwn freg\startup_stm32f103x6.o"
+"pwn freg\main.o"
+"pwn freg\stm32f1xx_it.o"
+"pwn freg\stm32f1xx_hal_msp.o"
+"pwn freg\stm32f1xx_hal_gpio_ex.o"
+"pwn freg\stm32f1xx_hal_tim.o"
+"pwn freg\stm32f1xx_hal_tim_ex.o"
+"pwn freg\stm32f1xx_hal.o"
+"pwn freg\stm32f1xx_hal_rcc.o"
+"pwn freg\stm32f1xx_hal_rcc_ex.o"
+"pwn freg\stm32f1xx_hal_gpio.o"
+"pwn freg\stm32f1xx_hal_dma.o"
+"pwn freg\stm32f1xx_hal_cortex.o"
+"pwn freg\stm32f1xx_hal_pwr.o"
+"pwn freg\stm32f1xx_hal_flash.o"
+"pwn freg\stm32f1xx_hal_flash_ex.o"
+"pwn freg\stm32f1xx_hal_exti.o"
+"pwn freg\system_stm32f1xx.o"
+--strict --scatter "pwn freg\pwn freg.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "pwn freg.map" -o "pwn freg\pwn freg.axf"
