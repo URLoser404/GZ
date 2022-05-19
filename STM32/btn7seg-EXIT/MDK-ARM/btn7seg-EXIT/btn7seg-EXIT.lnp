@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"btn7seg-exit\startup_stm32f103x6.o"
+"btn7seg-exit\main.o"
+"btn7seg-exit\stm32f1xx_it.o"
+"btn7seg-exit\stm32f1xx_hal_msp.o"
+"btn7seg-exit\stm32f1xx_hal_gpio_ex.o"
+"btn7seg-exit\stm32f1xx_hal_tim.o"
+"btn7seg-exit\stm32f1xx_hal_tim_ex.o"
+"btn7seg-exit\stm32f1xx_hal.o"
+"btn7seg-exit\stm32f1xx_hal_rcc.o"
+"btn7seg-exit\stm32f1xx_hal_rcc_ex.o"
+"btn7seg-exit\stm32f1xx_hal_gpio.o"
+"btn7seg-exit\stm32f1xx_hal_dma.o"
+"btn7seg-exit\stm32f1xx_hal_cortex.o"
+"btn7seg-exit\stm32f1xx_hal_pwr.o"
+"btn7seg-exit\stm32f1xx_hal_flash.o"
+"btn7seg-exit\stm32f1xx_hal_flash_ex.o"
+"btn7seg-exit\stm32f1xx_hal_exti.o"
+"btn7seg-exit\system_stm32f1xx.o"
+--strict --scatter "btn7seg-EXIT\btn7seg-EXIT.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "btn7seg-EXIT.map" -o btn7seg-EXIT\btn7seg-EXIT.axf
