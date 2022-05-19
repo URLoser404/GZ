@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"marquee\startup_stm32f103x6.o"
+"marquee\main.o"
+"marquee\stm32f1xx_it.o"
+"marquee\stm32f1xx_hal_msp.o"
+"marquee\stm32f1xx_hal_gpio_ex.o"
+"marquee\stm32f1xx_hal_tim.o"
+"marquee\stm32f1xx_hal_tim_ex.o"
+"marquee\stm32f1xx_hal.o"
+"marquee\stm32f1xx_hal_rcc.o"
+"marquee\stm32f1xx_hal_rcc_ex.o"
+"marquee\stm32f1xx_hal_gpio.o"
+"marquee\stm32f1xx_hal_dma.o"
+"marquee\stm32f1xx_hal_cortex.o"
+"marquee\stm32f1xx_hal_pwr.o"
+"marquee\stm32f1xx_hal_flash.o"
+"marquee\stm32f1xx_hal_flash_ex.o"
+"marquee\stm32f1xx_hal_exti.o"
+"marquee\system_stm32f1xx.o"
+--strict --scatter "marquee\marquee.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "marquee.map" -o marquee\marquee.axf
