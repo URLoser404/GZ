@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"timertest\startup_stm32f103x6.o"
+"timertest\main.o"
+"timertest\stm32f1xx_it.o"
+"timertest\stm32f1xx_hal_msp.o"
+"timertest\stm32f1xx_hal_gpio_ex.o"
+"timertest\stm32f1xx_hal_tim.o"
+"timertest\stm32f1xx_hal_tim_ex.o"
+"timertest\stm32f1xx_hal.o"
+"timertest\stm32f1xx_hal_rcc.o"
+"timertest\stm32f1xx_hal_rcc_ex.o"
+"timertest\stm32f1xx_hal_gpio.o"
+"timertest\stm32f1xx_hal_dma.o"
+"timertest\stm32f1xx_hal_cortex.o"
+"timertest\stm32f1xx_hal_pwr.o"
+"timertest\stm32f1xx_hal_flash.o"
+"timertest\stm32f1xx_hal_flash_ex.o"
+"timertest\stm32f1xx_hal_exti.o"
+"timertest\system_stm32f1xx.o"
+--strict --scatter "timerTest\timerTest.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "timerTest.map" -o timerTest\timerTest.axf
